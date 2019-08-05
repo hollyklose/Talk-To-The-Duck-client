@@ -1,7 +1,7 @@
 # Talk to the Duck
 ##### By Hicham Boualam, Eliza Davis, Holly Klose, & Kevin Rosario-Adorno
 
-### This is the front end of the Talk to the Duck application which is a software development themed blog. It's designed to let users create blog posts related to their software development challenges and triumphs, and read about the experiences of others. Users can read all posts and blog comments at any time, but must be logged in to create, edit or delete their own blog posts or comments. Logged in users can also like other posts as well as following the blog authors they like most. In addition, users can add and edit their profile pictures.
+This is the front end of the Talk to the Duck application which is a software development themed blog. It's designed to let users create blog posts related to their software development challenges and triumphs, and read about the experiences of others. Users can read all posts and blog comments at any time, but must be logged in to create, edit or delete their own blog posts or comments. Logged in users can also like other posts as well as following the blog authors they like most. In addition, users can add and edit their profile pictures.
 
 ### User Stories
 - As a unregistered user, I would like to sign up with email and password.

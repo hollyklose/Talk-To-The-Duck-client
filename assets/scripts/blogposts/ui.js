@@ -80,6 +80,13 @@ const onAddCommentSuccess = function () {
   $(`#${store.post_id}`).find('.number-comments').html(num)
 }
 
+const onAddCommentFailure = function () {
+  setTimeout(() => $(`#${store.post_id}`).find('.comment-message').text(''), 4000)
+  $(`#${store.post_id}`).find('.comment-feedback').text('Your comment must not be more than 700 characters.')
+  // $('form').trigger('reset')
+  setTimeout(() => $(`#${store.post_id}`).find('.comment-feedback').text(''), 4000)
+}
+
 const onShowUpdate = function () {
   $(this).addClass('hidden')
   $(this).parent().next().removeClass('hidden')
@@ -87,6 +94,14 @@ const onShowUpdate = function () {
 
 const onUpdateCommentSuccess = function () {
   $(this).parent().next().addClass('hidden')
+}
+
+const onUpdateCommentFailure = function () {
+  // setTimeout(() => $(`#${commentId}`).find('.comment-message').text(''), 4000)
+  console.log(`#${store.comment_id}`)
+  $(`#${store.comment_id}`).text('Your comment must not be more than 700 characters.')
+  // $('form').trigger('reset')
+  setTimeout(() => $(`#${store.comment_id}`).text(''), 4000)
 }
 
 module.exports = {
@@ -100,5 +115,7 @@ module.exports = {
   onDeleteSuccess,
   onAddCommentSuccess,
   onShowUpdate,
-  onUpdateCommentSuccess
+  onUpdateCommentSuccess,
+  onAddCommentFailure,
+  onUpdateCommentFailure
 }
