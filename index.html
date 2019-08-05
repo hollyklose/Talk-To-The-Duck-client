@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Talk to the Duck</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <header>
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+          <div class="navbar-header d-flex col">
+            <div class="duck-logo">
+              <img src="public/duck-logo.png" alt="duck logo">
+            </div>
+            <!-- <span class="navbar-text">Talk to the Duck</span> -->
+          </div>
+          <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+            <ul class="nav navbar-nav navbar ml-auto">
+              <div id="feedback"></div>
+            </ul>
+            <ul class="nav navbar-nav navbar-right ml-auto" id="auth-container">
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <h5 id="message"></h5>
+        <div class="container main-content">
+        </div>
+      </main>
+      <div class="modals"></div>
+    </body>
+</html>
