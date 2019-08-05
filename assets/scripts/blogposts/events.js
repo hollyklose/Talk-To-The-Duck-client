@@ -66,8 +66,8 @@ const onAddComment = function (event) {
     .then(() => {
       onGetPosts()
     })
-    .then(ui.onAddCommentSuccess())
-    .catch(ui.onFailure)
+    .then(ui.onAddCommentSuccess)
+    .catch(ui.onAddCommentFailure)
 }
 
 const onDeleteComment = function (event) {
@@ -86,12 +86,13 @@ const onUpdateComment = function (event) {
   const form = event.target
   const formData = getFormFields(form)
   const post = store.posts.find((post) => post.comments.find(comment => comment._id === commentId))
+  store.comment_id = commentId
   api.commentUpdate(formData, post.id, commentId)
     .then(() => {
       onGetPosts()
     })
     .then(ui.onUpdateCommentSuccess)
-    .catch(ui.onFailure)
+    .catch(ui.onUpdateCommentFailure)
 }
 
 const onFollowUser = function (event) {
